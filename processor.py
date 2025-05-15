@@ -4160,7 +4160,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
      
-    def preprocess_AbdomenAtlas(self, save_path='/workspace/processed_files/jsonl', root_path='/workspace/raw_data/AbdomenAtlas1.1Mini'):
+    def preprocess_AbdomenAtlas(self, root_path='/workspace/raw_data/AbdomenAtlas1.1Mini'):
         """
         mask: /workspace/raw_data/AbdomenAtlas1.1Mini/AbdomenAtlas1.1Mini_BDMAP_00000001_00000500/BDMAP_00000100/segmentations
         image: /workspace/raw_data/AbdomenAtlas1.1Mini/AbdomenAtlas1.1Mini_BDMAP_00000001_00000500/BDMAP_00000100/ct.nii.gz
@@ -4232,13 +4232,13 @@ class Process_Wrapper():
                             'patient_id':patent_id,
                         })
         
-        Path(f"{save_path}").mkdir(exist_ok=True, parents=True)        
-        with open(f"{save_path}/{dataset}.jsonl", 'w') as f:
+        Path(f"{self.jsonl_dir}").mkdir(exist_ok=True, parents=True)        
+        with open(f"{self.jsonl_dir}/{dataset}.jsonl", 'w') as f:
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
                     
-    def preprocess_LiQA(self, save_path='/workspace/processed_files/jsonl', root_path='/workspace/raw_data/LiQA'):
+    def preprocess_LiQA(self, root_path='/workspace/raw_data/LiQA'):
         """
         Only GED4 aligns with mask
         
@@ -4287,12 +4287,12 @@ class Process_Wrapper():
                                                 'patient_id':patent_id,
                                             })
         
-        Path(f"{save_path}").mkdir(exist_ok=True, parents=True)        
-        with open(f"{save_path}/{dataset}.jsonl", 'w') as f:
+        Path(f"{self.jsonl_dir}").mkdir(exist_ok=True, parents=True)        
+        with open(f"{self.jsonl_dir}/{dataset}.jsonl", 'w') as f:
             for datum in data:
                 f.write(json.dumps(datum)+'\n')       
     
-    def preprocess_RibFrac(self, save_path='/workspace/processed_files/jsonl', root_path='/workspace/raw_data/RibFrac'):
+    def preprocess_RibFrac(self, root_path='/workspace/raw_data/RibFrac'):
         """
         /workspace/raw_data/RibFrac/ribfrac-train1-image/RibFrac1-image.nii.gz
         /workspace/raw_data/RibFrac/ribfrac-train1-labels/RibFrac1-label.nii.gz
@@ -4324,12 +4324,12 @@ class Process_Wrapper():
                             'patient_id':patient_id,
                         })
             
-        Path(f"{save_path}").mkdir(exist_ok=True, parents=True)        
-        with open(f"{save_path}/{dataset}.jsonl", 'w') as f:
+        Path(f"{self.jsonl_dir}").mkdir(exist_ok=True, parents=True)        
+        with open(f"{self.jsonl_dir}/{dataset}.jsonl", 'w') as f:
             for datum in data:
                 f.write(json.dumps(datum)+'\n')    
     
-    def preprocess_Adrenal_ACC_Ki67(self, save_path='/workspace/processed_files/jsonl', root_path='/workspace/raw_data/Adrenal-ACC-Ki67-Seg/converted_nii'):
+    def preprocess_Adrenal_ACC_Ki67(self, root_path='/workspace/raw_data/Adrenal-ACC-Ki67-Seg/converted_nii'):
         """
         Need to transfer dcm to nii first
         
@@ -4356,12 +4356,12 @@ class Process_Wrapper():
                                 'patient_id':patient_id,
                             })
             
-        Path(f"{save_path}").mkdir(exist_ok=True, parents=True)        
-        with open(f"{save_path}/{dataset}.jsonl", 'w') as f:
+        Path(f"{self.jsonl_dir}").mkdir(exist_ok=True, parents=True)        
+        with open(f"{self.jsonl_dir}/{dataset}.jsonl", 'w') as f:
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
     
-    def preprocess_ATM22(self, save_path='/workspace/processed_files/jsonl', root_path='/workspace/raw_data/ATM22'):
+    def preprocess_ATM22(self, root_path='/workspace/raw_data/ATM22'):
         """
         /workspace/raw_data/ATM22/TrainBatch1/imagesTr/ATM_xxx_0000.nii.gz
         /workspace/raw_data/ATM22/TrainBatch1/labelsTr/ATM_xxx_0000.nii.gz
@@ -4396,12 +4396,12 @@ class Process_Wrapper():
                             'patient_id':patient_id,
                         })
             
-        Path(f"{save_path}").mkdir(exist_ok=True, parents=True)        
-        with open(f"{save_path}/{dataset}.jsonl", 'w') as f:
+        Path(f"{self.jsonl_dir}").mkdir(exist_ok=True, parents=True)        
+        with open(f"{self.jsonl_dir}/{dataset}.jsonl", 'w') as f:
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_LIDC_IDRI(self, save_path='/workspace/processed_files/jsonl', root_path='/workspace/raw_data/ULS23/processed_data/fully_annotated/LIDC-IDRI'):
+    def preprocess_LIDC_IDRI(self, root_path='/workspace/raw_data/ULS23/processed_data/fully_annotated/LIDC-IDRI'):
         """
         Need to unzip xxx.nii.gz.zip
         
@@ -4445,12 +4445,12 @@ class Process_Wrapper():
                         'patient_id':patient_id,
                     })
             
-        Path(f"{save_path}").mkdir(exist_ok=True, parents=True)        
-        with open(f"{save_path}/{dataset}.jsonl", 'w') as f:
+        Path(f"{self.jsonl_dir}").mkdir(exist_ok=True, parents=True)        
+        with open(f"{self.jsonl_dir}/{dataset}.jsonl", 'w') as f:
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_LNQ2023(self, save_path='/workspace/processed_files/jsonl', root_path='/workspace/raw_data/LNQ2023'):
+    def preprocess_LNQ2023(self, root_path='/workspace/raw_data/LNQ2023'):
         """
         /workspace/raw_data/LNQ2023/train/lnq2023-train-0394-ct.nrrd
         /workspace/raw_data/LNQ2023/train/lnq2023-train-0394-seg.nrrd
@@ -4483,8 +4483,8 @@ class Process_Wrapper():
             else:
                 continue
             
-        Path(f"{save_path}").mkdir(exist_ok=True, parents=True)        
-        with open(f"{save_path}/{dataset}.jsonl", 'w') as f:
+        Path(f"{self.jsonl_dir}").mkdir(exist_ok=True, parents=True)        
+        with open(f"{self.jsonl_dir}/{dataset}.jsonl", 'w') as f:
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
     
