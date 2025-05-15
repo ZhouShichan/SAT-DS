@@ -16,8 +16,6 @@ import argparse
 from tqdm import tqdm
 import nibabel as nib
 
-# datum = {"image": "/mnt/hwfile/medai/zhaoziheng/SAM/SAM/ACDC/database/testing/patient138/patient138_frame01.nii.gz", "mask": "/mnt/hwfile/medai/zhaoziheng/SAM/SAM/ACDC/database/testing/patient138/patient138_frame01_gt.nii.gz", "label": ["left heart ventricle", "right heart ventricle", "myocardium", "heart ventricle"], "modality": "MRI", "dataset": "ACDC", "official_split": "test", "renorm_image": "/mnt/hwfile/medai/zhaoziheng/SAM/processed_files_v4/ACDC/renorm_image/0.npy", "chwd": [1, 295, 350, 28], "patch_path": ["/mnt/hwfile/medai/zhaoziheng/SAM/processed_files_v4/ACDC/renorm_image/0/0_288_0_288_0_28.npy", "/mnt/hwfile/medai/zhaoziheng/SAM/processed_files_v4/ACDC/renorm_image/0/0_288_62_350_0_28.npy", "/mnt/hwfile/medai/zhaoziheng/SAM/processed_files_v4/ACDC/renorm_image/0/7_295_0_288_0_28.npy", "/mnt/hwfile/medai/zhaoziheng/SAM/processed_files_v4/ACDC/renorm_image/0/7_295_62_350_0_28.npy"], "patch_y1y2_x1x2_z1z2": [[0, 288, 0, 288, 0, 28], [0, 288, 62, 350, 0, 28], [7, 295, 0, 288, 0, 28], [7, 295, 62, 350, 0, 28]], "renorm_segmentation_dir": "/mnt/hwfile/medai/zhaoziheng/SAM/processed_files_v4/ACDC/renorm_segmentation/0", "renorm_y1x1z1_y2x2z2": [[131, 145, 0, 188, 198, 28], [160, 108, 2, 227, 208, 22], [120, 130, 0, 198, 213, 28], [131, 108, 0, 227, 208, 28]], "patient_id": "patient138_frame01.nii.gz", "visible_label_idx": [0, 1, 2, 3], "roi_y1x1z1_y2x2z2": [120, 108, 0, 227, 213, 28]}
-
 def npy_loader(datum):
     # load image
     dataset_name = datum['dataset']
@@ -29,7 +27,7 @@ def npy_loader(datum):
     # load mask
     _, h, w, d = datum['chwd']
     labels = datum['label'] # laryngeal cancer or hypopharyngeal cancer
-    mask_paths = [f"{seg_dir}/{label}.npy" for label in labels] # /remote-home/share/SAM/processed_files/Challenge_4C2021/segmentation/27/laryngeal cancer or hypopharyngeal cancer.npy
+    mask_paths = [f"{seg_dir}/{label}.npy" for label in labels]
     y1x1z1_y2x2z2_ls = datum['renorm_y1x1z1_y2x2z2']
     mc_mask = []
     for mask_path, y1x1z1_y2x2z2 in zip(mask_paths, y1x1z1_y2x2z2_ls):

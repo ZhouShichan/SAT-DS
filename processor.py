@@ -26,7 +26,7 @@ class Process_Wrapper():
     def __init__(self, jsonl_dir):
         self.jsonl_dir = jsonl_dir
 
-    def preprocess_ACDC(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/ACDC/database'):
+    def preprocess_ACDC(self, root_path='/workspace/raw_data/ACDC/database'):
         """
         https://www.creatis.insa-lyon.fr/Challenge/acdc/databases.html
         
@@ -58,7 +58,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
 
-    def preprocess_HAN_Seg(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/HAN_Seg/HaN-Seg/set_1'):
+    def preprocess_HAN_Seg(self, root_path='/workspace/raw_data/HAN_Seg/HaN-Seg/set_1'):
         """
         https://han-seg2023.grand-challenge.org
         
@@ -190,7 +190,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
 
-    def preprocess_CHAOS_CT(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/CHAOS/Train_Sets/CT'):
+    def preprocess_CHAOS_CT(self, root_path='/workspace/raw_data/CHAOS/Train_Sets/CT'):
         """
         https://chaos.grand-challenge.org
         
@@ -248,7 +248,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_CHAOS_MRI(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/CHAOS/Train_Sets/MR'):
+    def preprocess_CHAOS_MRI(self, root_path='/workspace/raw_data/CHAOS/Train_Sets/MR'):
         """
         https://chaos.grand-challenge.org
         
@@ -377,7 +377,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
     
-    def preprocess_AbdomenCT1K(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/AbdomenCT-1K'):
+    def preprocess_AbdomenCT1K(self, root_path='/workspace/raw_data/AbdomenCT-1K'):
         """
         https://github.com/JunMa11/AbdomenCT-1K#50-cases-with-13-annotated-organs-download-zenodo
         
@@ -413,7 +413,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_ISLES2022(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/ISLES22/ISLES'):
+    def preprocess_ISLES2022(self, root_path='/workspace/raw_data/ISLES22/ISLES'):
         """
         https://isles22.grand-challenge.org
         
@@ -469,7 +469,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')    
     
-    def preprocess_MRSpineSeg(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/MRSpineSeg_Challenge_SMU/train'):
+    def preprocess_MRSpineSeg(self, root_path='/workspace/raw_data/MRSpineSeg_Challenge_SMU/train'):
         """
         https://www.spinesegmentation-challenge.com/?page_id=1162
         
@@ -522,7 +522,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
 
-    def preprocess_LUNA16(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/LUNA16'):
+    def preprocess_LUNA16(self, root_path='/workspace/raw_data/LUNA16'):
         """
         https://luna16.grand-challenge.org/Data/
 
@@ -579,7 +579,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                     
-    def preprocess_MSD_Cardiac(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/MSD/Task02_Heart'):
+    def preprocess_MSD_Cardiac(self, root_path='/workspace/raw_data/MSD/Task02_Heart'):
         """
         http://medicaldecathlon.com/#tasks
         
@@ -623,7 +623,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_MSD_Liver(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/MSD/Task03_Liver'):
+    def preprocess_MSD_Liver(self, root_path='/workspace/raw_data/MSD/Task03_Liver'):
         """
         http://medicaldecathlon.com/#tasks
         
@@ -669,7 +669,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
 
-    def preprocess_MSD_Hippocampus(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/MSD/Task04_Hippocampus'):
+    def preprocess_MSD_Hippocampus(self, root_path='/workspace/raw_data/MSD/Task04_Hippocampus'):
         """
         http://medicaldecathlon.com/#tasks
         
@@ -714,7 +714,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_MSD_Prostate(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/MSD/Task05_Prostate'):
+    def preprocess_MSD_Prostate(self, root_path='/workspace/raw_data/MSD/Task05_Prostate'):
         """
         http://medicaldecathlon.com/#tasks
         
@@ -760,7 +760,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                      
-    def preprocess_MSD_Lung(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/MSD/Task06_Lung'):
+    def preprocess_MSD_Lung(self, root_path='/workspace/raw_data/MSD/Task06_Lung'):
         """
         http://medicaldecathlon.com/#tasks
         
@@ -802,7 +802,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
           
-    def preprocess_MSD_Pancreas(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/MSD/Task07_Pancreas'):
+    def preprocess_MSD_Pancreas(self, root_path='/workspace/raw_data/MSD/Task07_Pancreas'):
         """
         http://medicaldecathlon.com/#tasks
         
@@ -846,7 +846,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')      
                 
-    def preprocess_MSD_HepaticVessel(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/MSD/Task08_HepaticVessel'):
+    def preprocess_MSD_HepaticVessel(self, root_path='/workspace/raw_data/MSD/Task08_HepaticVessel'):
         """
         http://medicaldecathlon.com/#tasks
         
@@ -890,7 +890,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_MSD_Spleen(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/MSD/Task09_Spleen'):
+    def preprocess_MSD_Spleen(self, root_path='/workspace/raw_data/MSD/Task09_Spleen'):
         """
         http://medicaldecathlon.com/#tasks
         
@@ -933,7 +933,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
 
-    def preprocess_MSD_Colon(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/MSD/Task10_Colon'):
+    def preprocess_MSD_Colon(self, root_path='/workspace/raw_data/MSD/Task10_Colon'):
         """
         http://medicaldecathlon.com/#tasks
         
@@ -976,7 +976,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                             
-    def preprocess_SKI10(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/SKI10Data'):
+    def preprocess_SKI10(self, root_path='/workspace/raw_data/SKI10Data'):
         """
         https://ski10.grand-challenge.org
         
@@ -1028,7 +1028,7 @@ class Process_Wrapper():
                 f.write(json.dumps(datum)+'\n')
                 
                 
-    def preprocess_SLIVER07(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/SLIVER07'):
+    def preprocess_SLIVER07(self, root_path='/workspace/raw_data/SLIVER07'):
         """
         https://sliver07.grand-challenge.org/Home/
         
@@ -1070,7 +1070,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_PROMISE12(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/PROMISE12'):
+    def preprocess_PROMISE12(self, root_path='/workspace/raw_data/PROMISE12'):
         """
         https://liuquande.github.io/SAML/
         
@@ -1114,7 +1114,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
 
-    def preprocess_BrainPTM(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/sheba75_data'):
+    def preprocess_BrainPTM(self, root_path='/workspace/raw_data/sheba75_data'):
         """
         https://brainptm-2021.grand-challenge.org/Participation/
         
@@ -1200,7 +1200,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
 
-    def preprocess_WMH_Segmentation_Challenge(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/WMH_Segmentation_Challenge/dataverse_files'):            
+    def preprocess_WMH_Segmentation_Challenge(self, root_path='/workspace/raw_data/WMH_Segmentation_Challenge/dataverse_files'):            
         """
         https://wmh.isi.uu.nl
         
@@ -1265,7 +1265,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
 
-    def preprocess_WORD(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/WORD-V0.1.0'):            
+    def preprocess_WORD(self, root_path='/workspace/raw_data/WORD-V0.1.0'):            
         """
         https://github.com/HiLab-git/WORD
         
@@ -1341,7 +1341,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
     
-    def preprocess_TotalSegmentator(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/Totalsegmentator_dataset'):            
+    def preprocess_TotalSegmentator(self, root_path='/workspace/raw_data/Totalsegmentator_dataset'):            
         """
         In 1204 CT images we segmented 104 anatomical structures (27 organs, 59 bones, 10 muscles, 8 vessels) 
         covering a majority of relevant classes for most use cases.
@@ -1784,7 +1784,7 @@ class Process_Wrapper():
                 for datum in data:
                     f.write(json.dumps(datum)+'\n')
     
-    def preprocess_TotalSegmentator_v2(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/Totalsegmentator_version2'):            
+    def preprocess_TotalSegmentator_v2(self, root_path='/workspace/raw_data/Totalsegmentator_version2'):            
         """
         The same images as v1, but add 19 new labels and a merged one (heart)
         
@@ -1792,7 +1792,7 @@ class Process_Wrapper():
         root_path -> mask_path
         """
         # NOTE: set image_root as the root_path of TotalSegmentator 
-        image_root = '/mnt/hwfile/medai/zhaoziheng/SAM/SAM/Totalsegmentator_dataset'
+        image_root = '/workspace/raw_data/Totalsegmentator_dataset'
             
         dataset = 'TotalSegmentator_v2'
         modality = 'CT'
@@ -1887,7 +1887,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
 
-    def preprocess_FLARE22(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/FLARE22'):
+    def preprocess_FLARE22(self, root_path='/workspace/raw_data/FLARE22'):
         """
         https://flare22.grand-challenge.org
         
@@ -1946,7 +1946,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
 
-    def preprocess_NSCLC(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/NSCLC'):
+    def preprocess_NSCLC(self, root_path='/workspace/raw_data/NSCLC'):
         """
         https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=68551327#685513274328f8386ccc42dcb282f6a42d8beffd
         
@@ -2003,13 +2003,13 @@ class Process_Wrapper():
         modality = 'CT'
 
         # convert dicom to NifTi：a demo
-        # for folder in tqdm(os.listdir('/mnt/hwfile/medai/zhaoziheng/SAM/SAM/NSCLC/manifest-1586193031612/NSCLC-Radiomics')):
+        # for folder in tqdm(os.listdir('/workspace/raw_data/NSCLC/manifest-1586193031612/NSCLC-Radiomics')):
         #     if 'LUNG1-' not in folder:
         #         continue
-        #     for tmp1 in os.listdir(os.path.join('/mnt/hwfile/medai/zhaoziheng/SAM/SAM/NSCLC/manifest-1586193031612/NSCLC-Radiomics', folder)):
-        #         for tmp2 in os.listdir(os.path.join('/mnt/hwfile/medai/zhaoziheng/SAM/SAM/NSCLC/manifest-1586193031612/NSCLC-Radiomics', folder, tmp1)):
-        #             os.system('dcm2niix %s'%os.path.join('/mnt/hwfile/medai/zhaoziheng/SAM/SAM/NSCLC/manifest-1586193031612/NSCLC-Radiomics', folder, tmp1, tmp2))
-        #             print('dcm2niix %s'%os.path.join('/mnt/hwfile/medai/zhaoziheng/SAM/SAM/NSCLC/manifest-1586193031612/NSCLC-Radiomics', folder, tmp1, tmp2))
+        #     for tmp1 in os.listdir(os.path.join('/workspace/raw_data/NSCLC/manifest-1586193031612/NSCLC-Radiomics', folder)):
+        #         for tmp2 in os.listdir(os.path.join('/workspace/raw_data/NSCLC/manifest-1586193031612/NSCLC-Radiomics', folder, tmp1)):
+        #             os.system('dcm2niix %s'%os.path.join('/workspace/raw_data/NSCLC/manifest-1586193031612/NSCLC-Radiomics', folder, tmp1, tmp2))
+        #             print('dcm2niix %s'%os.path.join('/workspace/raw_data/NSCLC/manifest-1586193031612/NSCLC-Radiomics', folder, tmp1, tmp2))
 
         monai_loader = monai.transforms.LoadImage(image_only=True)
         for case in tqdm(os.listdir(root_path+'/manifest-1586193031612/NSCLC-Radiomics')):
@@ -2073,7 +2073,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')            
 
-    def preprocess_COVID19(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/COVID-19-CT-Seg_20cases'):
+    def preprocess_COVID19(self, root_path='/workspace/raw_data/COVID-19-CT-Seg_20cases'):
         """
         https://zenodo.org/record/3757476#.Xpz8OcgzZPY
         
@@ -2123,7 +2123,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_Brain_Atlas(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/Hammers_data'):
+    def preprocess_Brain_Atlas(self, root_path='/workspace/raw_data/Hammers_data'):
         """
         http://www.brain-development.org/brain-atlases/
         
@@ -2253,7 +2253,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_Couinaud_Liver(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/Couinaud_Liver'):
+    def preprocess_Couinaud_Liver(self, root_path='/workspace/raw_data/Couinaud_Liver'):
         """
         Couinaud Liver Segmentation (8 parts of liver)
         
@@ -2261,7 +2261,7 @@ class Process_Wrapper():
         """
         
         # NOTE: set this well you place the image of MSD_HepaticVessel
-        root_path_to_image = "/mnt/hwfile/medai/zhaoziheng/SAM/SAM/MSD/Task08_HepaticVessel/imagesTr"
+        root_path_to_image = "/workspace/raw_data/MSD/Task08_HepaticVessel/imagesTr"
         
         dataset = 'Couinaud_Liver'
         labels = [
@@ -2297,7 +2297,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_AMOS22_CT(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/AMOS22'):
+    def preprocess_AMOS22_CT(self, root_path='/workspace/raw_data/AMOS22'):
         """
         https://zenodo.org/records/7155725#.Y0OOCOxBztM.
         """
@@ -2355,7 +2355,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_AMOS22_MRI(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/AMOS22'):
+    def preprocess_AMOS22_MRI(self, root_path='/workspace/raw_data/AMOS22'):
         """
         https://zenodo.org/records/7155725#.Y0OOCOxBztM.
         """
@@ -2413,7 +2413,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_BTCV(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/BTCV'):
+    def preprocess_BTCV(self, root_path='/workspace/raw_data/BTCV'):
         """
         BTCV Abdomen
         
@@ -2458,7 +2458,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n') 
                 
-    def preprocess_CT_ORG(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/CT_ORG'):
+    def preprocess_CT_ORG(self, root_path='/workspace/raw_data/CT_ORG'):
         """
         https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=61080890
         """
@@ -2494,7 +2494,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n') 
                 
-    def preprocess_FeTA2022(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/FeTA2022'):
+    def preprocess_FeTA2022(self, root_path='/workspace/raw_data/FeTA2022'):
         """
         https://feta.grand-challenge.org/data-download/
         """
@@ -2545,7 +2545,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_ToothFairy(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/ToothFairy'):
+    def preprocess_ToothFairy(self, root_path='/workspace/raw_data/ToothFairy'):
         """
         https://ditto.ing.unimore.it/toothfairy/
         """
@@ -2587,7 +2587,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n') 
                 
-    def preprocess_Hecktor2022(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/Hecktor2022'):
+    def preprocess_Hecktor2022(self, root_path='/workspace/raw_data/Hecktor2022'):
         """
         https://hecktor.grand-challenge.org/Data/
         """
@@ -2620,7 +2620,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_PARSE2022(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/PARSE2022'):
+    def preprocess_PARSE2022(self, root_path='/workspace/raw_data/PARSE2022'):
         """
         https://parse2022.grand-challenge.org/Dataset/
         """
@@ -2651,7 +2651,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n') 
                 
-    def preprocess_SegTHOR(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/SegTHOR'):
+    def preprocess_SegTHOR(self, root_path='/workspace/raw_data/SegTHOR'):
         """
         https://competitions.codalab.org/competitions/21145#participate-get_starting_kit
         """
@@ -2685,7 +2685,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_MM_WHS_CT(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/MM_WHS'):
+    def preprocess_MM_WHS_CT(self, root_path='/workspace/raw_data/MM_WHS'):
         """
         https://mega.nz/folder/UNMF2YYI#1cqJVzo4p_wESv9P_pc8uA
         """
@@ -2722,7 +2722,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n') 
                 
-    def preprocess_MM_WHS_MRI(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/MM_WHS'):
+    def preprocess_MM_WHS_MRI(self, root_path='/workspace/raw_data/MM_WHS'):
         """
         https://mega.nz/folder/UNMF2YYI#1cqJVzo4p_wESv9P_pc8uA
         """
@@ -2759,7 +2759,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n') 
                 
-    def preprocess_CMRxMotion(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/CMRxMotion'):
+    def preprocess_CMRxMotion(self, root_path='/workspace/raw_data/CMRxMotion'):
         """
         https://www.synapse.org/Synapse:syn28503327/files/
         """
@@ -2828,7 +2828,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_LAScarQS22_Task1(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/LAScarQS22'):
+    def preprocess_LAScarQS22_Task1(self, root_path='/workspace/raw_data/LAScarQS22'):
         """
         https://zmiclab.github.io/projects/lascarqs22/data.html
         """
@@ -2879,7 +2879,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_LAScarQS22_Task2(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/LAScarQS22'):
+    def preprocess_LAScarQS22_Task2(self, root_path='/workspace/raw_data/LAScarQS22'):
         """
         https://zmiclab.github.io/projects/lascarqs22/data.html
         """
@@ -2923,7 +2923,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
     
-    def preprocess_ATLASR2(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/ATLASR2'):
+    def preprocess_ATLASR2(self, root_path='/workspace/raw_data/ATLASR2'):
         """
         http://fcon_1000.projects.nitrc.org/indi/retro/atlas.html
         """
@@ -2959,7 +2959,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_CrossMoDA2021(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/CrossMoDA2021'):
+    def preprocess_CrossMoDA2021(self, root_path='/workspace/raw_data/CrossMoDA2021'):
         """
         https://crossmoda.grand-challenge.org/Data/
         """
@@ -2991,7 +2991,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_MyoPS2020(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/MyoPS2020'):
+    def preprocess_MyoPS2020(self, root_path='/workspace/raw_data/MyoPS2020'):
         """
         https://mega.nz/folder/BRdnDISQ#FnCg9ykPlTWYe5hrRZxi-w
         """
@@ -3070,7 +3070,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_Instance22(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/Instance22'):
+    def preprocess_Instance22(self, root_path='/workspace/raw_data/Instance22'):
         """
         https://instance.grand-challenge.org/Dataset/
         """
@@ -3101,7 +3101,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_KiTS23(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/KiTS23'):
+    def preprocess_KiTS23(self, root_path='/workspace/raw_data/KiTS23'):
         """
         https://github.com/neheller/kits23
         """
@@ -3134,7 +3134,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n') 
                 
-    def preprocess_ATLAS(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/ATLAS'):
+    def preprocess_ATLAS(self, root_path='/workspace/raw_data/ATLAS'):
         """
         https://atlas-challenge.u-bourgogne.fr/dataset
         """
@@ -3166,7 +3166,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n') 
                 
-    def preprocess_KiPA22(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/KiPA22'):
+    def preprocess_KiPA22(self, root_path='/workspace/raw_data/KiPA22'):
         """
         https://kipa22.grand-challenge.org/dataset/
         """
@@ -3209,7 +3209,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n') 
                 
-    def preprocess_BraTS2023_GLI(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/BraTS2023_GLI'):
+    def preprocess_BraTS2023_GLI(self, root_path='/workspace/raw_data/BraTS2023_GLI'):
         """
         https://www.synapse.org/Synapse:syn53708126
         """
@@ -3242,7 +3242,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_BraTS2023_MEN(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/BraTS2023_MEN'):
+    def preprocess_BraTS2023_MEN(self, root_path='/workspace/raw_data/BraTS2023_MEN'):
         """
         https://www.synapse.org/Synapse:syn53708126
         """
@@ -3281,7 +3281,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_BraTS2023_MET(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/BraTS2023_MET'):
+    def preprocess_BraTS2023_MET(self, root_path='/workspace/raw_data/BraTS2023_MET'):
         """
         https://www.synapse.org/Synapse:syn53708126
         """
@@ -3329,7 +3329,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_BraTS2023_PED(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/BraTS2023_PED'):
+    def preprocess_BraTS2023_PED(self, root_path='/workspace/raw_data/BraTS2023_PED'):
         """
         https://www.synapse.org/Synapse:syn53708126
         """
@@ -3362,7 +3362,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_BraTS2023_SSA(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/BraTS2023_SSA'):
+    def preprocess_BraTS2023_SSA(self, root_path='/workspace/raw_data/BraTS2023_SSA'):
         """
         https://www.synapse.org/Synapse:syn53708126
         """
@@ -3395,7 +3395,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_BTCV_Cervix(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/BTCV_Cervix'):
+    def preprocess_BTCV_Cervix(self, root_path='/workspace/raw_data/BTCV_Cervix'):
         """
         https://www.synapse.org/Synapse:syn3378972
         """
@@ -3427,7 +3427,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_SEGA(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/SEGA'):
+    def preprocess_SEGA(self, root_path='/workspace/raw_data/SEGA'):
         """
         https://multicenteraorta.grand-challenge.org/data/
         """
@@ -3516,7 +3516,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_Pancreas_CT(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/Pancreas_CT'):
+    def preprocess_Pancreas_CT(self, root_path='/workspace/raw_data/Pancreas_CT'):
         """
         https://wiki.cancerimagingarchive.net/display/public/pancreas-ct
         """
@@ -3554,7 +3554,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_FUMPE(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/FUMPE'):
+    def preprocess_FUMPE(self, root_path='/workspace/raw_data/FUMPE'):
         """
         https://www.kaggle.com/datasets/andrewmvd/pulmonary-embolism-in-ct-images
         """
@@ -3592,7 +3592,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
       
-    def preprocess_VerSe(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/VerSe'):
+    def preprocess_VerSe(self, root_path='/workspace/raw_data/VerSe'):
         """
         https://github.com/anjany/verse
         """
@@ -3662,7 +3662,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_PDDCA(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/PDDCA'):
+    def preprocess_PDDCA(self, root_path='/workspace/raw_data/PDDCA'):
         """
         https://www.imagenglab.com/newsite/pddca/
         """
@@ -3718,7 +3718,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n') 
                 
-    def preprocess_LNDb(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/LNDb'):
+    def preprocess_LNDb(self, root_path='/workspace/raw_data/LNDb'):
         """
         https://zenodo.org/record/7153205#.Yz_oVHbMJPZ
         """
@@ -3766,7 +3766,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
 
-    def preprocess_SegRap2023_Task1(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/SegRap2023'):
+    def preprocess_SegRap2023_Task1(self, root_path='/workspace/raw_data/SegRap2023'):
         """
         https://segrap2023.grand-challenge.org
         """
@@ -3849,7 +3849,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_SegRap2023_Task2(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/SegRap2023'):
+    def preprocess_SegRap2023_Task2(self, root_path='/workspace/raw_data/SegRap2023'):
         """
         https://segrap2023.grand-challenge.org
         """
@@ -3880,7 +3880,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_CTPelvic1K(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/CTPelvic1K'):
+    def preprocess_CTPelvic1K(self, root_path='/workspace/raw_data/CTPelvic1K'):
         """
         https://zenodo.org/records/4588403#.YEyLq_0zaCo
         """
@@ -3927,7 +3927,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_autoPET(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/autoPET'):
+    def preprocess_autoPET(self, root_path='/workspace/raw_data/autoPET'):
         """
         https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=93258287
         
@@ -3985,7 +3985,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n') 
 
-    def preprocess_DAP_Atlas(self, root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/DAP_Atlas'):
+    def preprocess_DAP_Atlas(self, root_path='/workspace/raw_data/DAP_Atlas'):
         """
         https://github.com/alexanderjaus/AtlasDataset
         """
@@ -4160,10 +4160,10 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
      
-    def preprocess_AbdomenAtlas(self, save_path='/mnt/hwfile/medai/zhaoziheng/SAM/processed_files_v1', root_path='/mnt/petrelfs/zhangyao/AbdomenAtlas1.1Mini'):
+    def preprocess_AbdomenAtlas(self, save_path='/workspace/processed_files/jsonl', root_path='/workspace/raw_data/AbdomenAtlas1.1Mini'):
         """
-        mask: /mnt/petrelfs/zhangyao/AbdomenAtlas1.1Mini/AbdomenAtlas1.1Mini_BDMAP_00000001_00000500/BDMAP_00000100/segmentations
-        image: /mnt/petrelfs/zhangyao/AbdomenAtlas1.1Mini/AbdomenAtlas1.1Mini_BDMAP_00000001_00000500/BDMAP_00000100/ct.nii.gz
+        mask: /workspace/raw_data/AbdomenAtlas1.1Mini/AbdomenAtlas1.1Mini_BDMAP_00000001_00000500/BDMAP_00000100/segmentations
+        image: /workspace/raw_data/AbdomenAtlas1.1Mini/AbdomenAtlas1.1Mini_BDMAP_00000001_00000500/BDMAP_00000100/ct.nii.gz
         
         adrenal_gland_left.nii.gz   colon.nii.gz        gall_bladder.nii.gz    liver.nii.gz                         postcava.nii.gz
         adrenal_gland_right.nii.gz  duodenum.nii.gz     hepatic_vessel.nii.gz  lung_left.nii.gz                     prostate.nii.gz
@@ -4238,7 +4238,7 @@ class Process_Wrapper():
                 f.write(json.dumps(datum)+'\n')
                 
                     
-    def preprocess_LiQA(self, save_path='/mnt/hwfile/medai/zhaoziheng/SAM/processed_files_v1', root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/LiQA'):
+    def preprocess_LiQA(self, save_path='/workspace/processed_files/jsonl', root_path='/workspace/raw_data/LiQA'):
         """
         Only GED4 aligns with mask
         
@@ -4292,10 +4292,10 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')       
     
-    def preprocess_RibFrac(self, save_path='/mnt/hwfile/medai/zhaoziheng/SAM/processed_files_v1', root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/RibFrac'):
+    def preprocess_RibFrac(self, save_path='/workspace/processed_files/jsonl', root_path='/workspace/raw_data/RibFrac'):
         """
-        /mnt/hwfile/medai/zhaoziheng/SAM/SAM/RibFrac/ribfrac-train1-image/RibFrac1-image.nii.gz
-        /mnt/hwfile/medai/zhaoziheng/SAM/SAM/RibFrac/ribfrac-train1-labels/RibFrac1-label.nii.gz
+        /workspace/raw_data/RibFrac/ribfrac-train1-image/RibFrac1-image.nii.gz
+        /workspace/raw_data/RibFrac/ribfrac-train1-labels/RibFrac1-label.nii.gz
         """
         dataset = 'RibFrac'
         labels = [
@@ -4329,7 +4329,7 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')    
     
-    def preprocess_Adrenal_ACC_Ki67(self, save_path='/mnt/hwfile/medai/zhaoziheng/SAM/processed_files_v1', root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/Adrenal-ACC-Ki67-Seg/converted_nii'):
+    def preprocess_Adrenal_ACC_Ki67(self, save_path='/workspace/processed_files/jsonl', root_path='/workspace/raw_data/Adrenal-ACC-Ki67-Seg/converted_nii'):
         """
         Need to transfer dcm to nii first
         
@@ -4361,10 +4361,10 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
     
-    def preprocess_ATM22(self, save_path='/mnt/hwfile/medai/zhaoziheng/SAM/processed_files_v1', root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/ATM22'):
+    def preprocess_ATM22(self, save_path='/workspace/processed_files/jsonl', root_path='/workspace/raw_data/ATM22'):
         """
-        /mnt/hwfile/medai/zhaoziheng/SAM/SAM/ATM22/TrainBatch1/imagesTr/ATM_xxx_0000.nii.gz
-        /mnt/hwfile/medai/zhaoziheng/SAM/SAM/ATM22/TrainBatch1/labelsTr/ATM_xxx_0000.nii.gz
+        /workspace/raw_data/ATM22/TrainBatch1/imagesTr/ATM_xxx_0000.nii.gz
+        /workspace/raw_data/ATM22/TrainBatch1/labelsTr/ATM_xxx_0000.nii.gz
         """
         dataset = 'ATM22'
         labels = [
@@ -4401,12 +4401,12 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_LIDC_IDRI(self, save_path='/mnt/hwfile/medai/zhaoziheng/SAM/processed_files_v1', root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/ULS23/processed_data/fully_annotated/LIDC-IDRI'):
+    def preprocess_LIDC_IDRI(self, save_path='/workspace/processed_files/jsonl', root_path='/workspace/raw_data/ULS23/processed_data/fully_annotated/LIDC-IDRI'):
         """
         Need to unzip xxx.nii.gz.zip
         
-        /mnt/hwfile/medai/zhaoziheng/SAM/SAM/ULS23/processed_data/fully_annotated/LIDC-IDRI/labels/lidcidri_752_lesion_01_sample_0.nii.gz.zip
-        /mnt/hwfile/medai/zhaoziheng/SAM/SAM/ULS23/processed_data/fully_annotated/LIDC-IDRI/images/lidcidri_752_lesion_01_sample_0.nii.gz
+        /workspace/raw_data/ULS23/processed_data/fully_annotated/LIDC-IDRI/labels/lidcidri_752_lesion_01_sample_0.nii.gz.zip
+        /workspace/raw_data/ULS23/processed_data/fully_annotated/LIDC-IDRI/images/lidcidri_752_lesion_01_sample_0.nii.gz
         """
         import zipfile
         
@@ -4450,10 +4450,10 @@ class Process_Wrapper():
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
                 
-    def preprocess_LNQ2023(self, save_path='/mnt/hwfile/medai/zhaoziheng/SAM/processed_files_v1', root_path='/mnt/hwfile/medai/zhaoziheng/SAM/SAM/LNQ2023'):
+    def preprocess_LNQ2023(self, save_path='/workspace/processed_files/jsonl', root_path='/workspace/raw_data/LNQ2023'):
         """
-        /mnt/hwfile/medai/zhaoziheng/SAM/SAM/LNQ2023/train/lnq2023-train-0394-ct.nrrd
-        /mnt/hwfile/medai/zhaoziheng/SAM/SAM/LNQ2023/train/lnq2023-train-0394-seg.nrrd
+        /workspace/raw_data/LNQ2023/train/lnq2023-train-0394-ct.nrrd
+        /workspace/raw_data/LNQ2023/train/lnq2023-train-0394-seg.nrrd
         """
         
         dataset = 'LNQ2023'
@@ -4492,7 +4492,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--dataset_name')
     parser.add_argument('--root_path')
-    parser.add_argument('--jsonl_dir', default='/mnt/hwfile/medai/zhaoziheng/SAM/processed_files_v1_debug')
+    parser.add_argument('--jsonl_dir', default='/workspace/processed_files/jsonl')
     config = parser.parse_args()
 
     loader = Process_Wrapper(config.jsonl_dir)
