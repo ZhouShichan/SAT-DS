@@ -3734,6 +3734,38 @@ class Loader_Wrapper():
 
         return img, mask, labels, datum['modality'], datum['image'], datum['mask']
 
+    def FAHZU_CBD_MRI(self, datum:dict) -> tuple:
+        """
+        labels = [
+            'background',
+            'cancer',
+            ]
+        """
+        
+        monai_loader = monai.transforms.Compose(
+            [
+                monai.transforms.LoadImaged(keys=["image", "label"]),
+                monai.transforms.AddChanneld(keys=["image", "label"]),
+                monai.transforms.Orientationd(axcodes="RAS", keys=["image", "label"]),
+                monai.transforms.Spacingd(
+                    keys=["image", "label"], pixdim=(1, 1, 3), mode=("bilinear", "nearest")
+                ),
+                monai.transforms.CropForegroundd(keys=["image", "label"], source_key="image"),
+                monai.transforms.ToTensord(keys=["image", "label"]),
+            ]
+        )
+        dictionary = monai_loader({"image": datum["image"], "label": datum["mask"]})
+        img = dictionary["image"]  # [1, H, W, D]
+        # dictionary["label"] [1, H, W, D]
+        mask = torch.concat(
+            [(dictionary["label"] == i).float() for i in range(len(datum["label"]))],
+            dim=0,
+        )  # [C, H, W, D]
+
+        img = Normalization(img, "MRI")
+
+        return img, mask, datum["label"], datum["modality"], datum["image"], datum["mask"]
+
 def Normalization(torch_image, image_type):
     # rgb_list = ['rgb', 'photograph', 'laparoscopy', 'colonoscopy', 'microscopy', 'dermoscopy', 'fundus', 'fundus image']
     np_image = torch_image.numpy()

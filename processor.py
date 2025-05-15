@@ -4487,6 +4487,40 @@ class Process_Wrapper():
         with open(f"{save_path}/{dataset}.jsonl", 'w') as f:
             for datum in data:
                 f.write(json.dumps(datum)+'\n')
+    
+    def preprocess_FAHZU_CBD_MRI(self, root_path='/workspace/raw_data/FAHZU_CBD_MRI'):
+        """carcinoma of bile duct
+        provided by FAHZU
+        
+        "modality": { 
+            "0": "MRI"
+        }, 
+        "labels": { 
+            "0": "background", 
+            "1": "cancer", 
+        }, 
+        """
+        dataset = 'FAHZU_CBD_MRI'
+        labels = ['background','cancer']
+        modality = 'MRI'
+        data = []
+        
+        case_ids = sorted(set(p.stem for p in Path(root_path).glob("*.nii") if not p.stem.endswith("region")))
+        for case in case_ids:
+            data.append({
+                'image':Path(root_path,f"{case}.nii").absolute().as_posix(),
+                'mask':Path(root_path,f"{case}_region.nii").absolute().as_posix(),
+                'label':labels,
+                'modality':modality,
+                'dataset':dataset,
+                'official_split':'train',
+                'patient_id':case,
+            })
+        
+        Path(self.jsonl_dir).mkdir(exist_ok=True, parents=True)        
+        with open(f"{self.jsonl_dir}/{dataset}.jsonl", 'w') as f:
+            for datum in data:
+                f.write(json.dumps(datum)+'\n')    
      
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
